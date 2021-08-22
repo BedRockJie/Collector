@@ -1,0 +1,1 @@
+/home/gaojies/workspace/d1-tina-open/package/test/lvgltest/imx6ull-lvgl-master/build/CMakeFiles/card_detect.dir
