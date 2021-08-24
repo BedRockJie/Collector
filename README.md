@@ -57,6 +57,13 @@ make -j4
 mkdir /tmp/card_img
 ```
 ## 3、运行可执行文件
+```
+./card22222
+./carddetect 2 # 2这个参数表示从socket 接收参数识别
+				   # 当参数为 1 时，其后面可以跟 图片路径
+
+```
+
 
 # 源码目录
 
@@ -97,3 +104,13 @@ mkdir /tmp/card_img
 ```
 
 
+# 创建新的应用或创建新APP
+
+## 模型训练指引
+模型训练请参考：[YOLOv5模型训练指引](./yolov5_script/README.md)  
+模型转换请参考：[YOLOv5模型转换指引](./yolov5_module/README.md)  
+
+
+
+## APP 开发指引
+想单独开发APP请参考：[APP开发指引](./LVGL_APP/README.md)
