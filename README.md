@@ -47,22 +47,53 @@ make -j4
 # 运行
 ## 1、拷贝模型文件至小机端SD卡
 
+```shell
+/mnt/SDCARD/yolo_model/best-opt.param
+/mnt/SDCARD/yolo_model/best-opt.bin
 ```
 
+## 2、创建临时文件路径
+```Shell
+mkdir /tmp/card_img
 ```
+## 3、运行可执行文件
 
 # 源码目录
 
-``` Shell
-├─device_test_demo 
-│  ├─Camer_test  
-│  └─Key_test  
-├─LVGL_APP  
-├─ncnn_card_detect  
-├─ncnn_module  
-├─script  
-├─yolov5_module  
-└─yolov5_script  
+``` shell
+├─device_test_demo #外设测试demo 目录
+│  ├─Camer_test
+│  └─Key_test
+├─Docs # 文档目录
+│  ├─Dos
+│  └─image
+├─LVGL_APP  # 应用端程序
+│  └─imx6ull-lvgl-master
+│      ├─build # cmake 编译目录
+│      ├─cmakebuildtools # cmake 配置目录
+│      ├─lvgl # LVGl主目录
+│      ├─lv_100ask # app目录
+│      │  ├─lib
+│      │  └─src
+│      │      ├─100ask_demo_c_array_images # 图片文件转码文件入口
+...
+│      │      ├─lv_100ask_demo # app 桌面入口程序
+│      │      ├─lv_100ask_demo_subroutine
+...
+│      │      │  ├─100ask_cardtest # app开发入口程序
+...
+│      │      ├─lv_100ask_demo_theme
+│      │      ├─lv_100ask_examples
+│      │      └─lv_100ask_font
+│      ├─lv_drivers  #
+│      ├─lv_examples
+│      ├─lv_lib_png
+│      └─output  #可执行文件目录
+├─ncnn_card_detect # 服务端程序
+├─ncnn_module # ncnn训练模型及转换好的模型
+├─script # 开发过程中用到的脚本
+├─yolov5_module # yolov5训练出来的模型
+└─yolov5_script # yolov5训练模型中用到的脚本
 ```
 
 
